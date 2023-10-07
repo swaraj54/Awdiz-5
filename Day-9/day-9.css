@@ -1,0 +1,16 @@
+#testingExternalStyling {
+    color: red;
+}
+
+
+.c-red {
+    color: red;
+}
+
+.c-blue {
+    color: blue;
+}
+
+.f-34 {
+    font-size: 34px;
+}
