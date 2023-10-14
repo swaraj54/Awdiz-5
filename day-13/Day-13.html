@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/d4fa596027.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'OnePlus Sans Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+        }
+
+
+        #screen {
+            width: 100%;
+            /* border: 5px solid red; */
+        }
+
+        #navbar {
+            width: 100%;
+            /* border: 5px solid blue; */
+            height: 60px;
+        }
+
+        #nav-one {
+            height: 32px;
+            /* border: 2px solid green; */
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #nav-one>p:nth-child(1){
+            width: 22%;
+            /* border: 1px solid red; */
+        }
+        #nav-one>p:nth-child(2){
+            width: 50%;
+            /* border: 1px solid red; */
+        }
+        #nav-one>p:nth-child(3){
+            width: 22%;
+            /* border: 1px solid red; */
+            text-align: right;
+        }
+
+
+
+        #body {
+            width: 100%;
+            height: 1000px;
+            border: 5px solid blue;
+        }
+
+        #footer {
+            width: 100%;
+            height: 200px;
+            border: 5px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="width: 100%; border: 2px solid red; height: 400px; text-align: center;">
+        <div style="width: 30%; border: 5px solid purple; height: 200px; margin:auto ; text-align: left;">1234</div>
+        awdefgrthyjukilop
+    </div> -->
+    <!-- <img style="display: block; margin-left: auto; margin-right:auto ; width: 10%; height: 200px;"
+        src="data:image/jpeg;base64,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" /> -->
+
+    <div id="screen">
+        <div id="navbar">
+            <div id="nav-one">
+                <p></p>
+                <p>Hit ‘Notify Me’ and stand a chance to win a OnePlus Open. Notify Me ›</p>
+                <p><i class="fa-solid fa-x"></i></p>
+            </div>
+            <div id="nav-two"> navbar</div>
+        </div>
+        <div id="body">Body</div>
+        <div id="footer">Footer</div>
+    </div>
+    <!-- <div style="display: flex; justify-content: space-between;">
+        <div style="border: 1px solid red;">1</div>
+        <div style="border: 1px solid red;">2</div>
+    </div>
+
+    <div style="display: flex; justify-content: space-evenly;">
+        <div style="border: 1px solid red;">1</div>
+        <div style="border: 1px solid red;">2</div>
+    </div>
+
+    <div style="display: flex; justify-content: space-around;">
+        <div style="border: 1px solid red;">1</div>
+        <div style="border: 1px solid red;">2</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; ">
+        <div style="border: 1px solid red;">1</div>
+        <div style="border: 1px solid red;">2</div>
+        <div style="border: 1px solid red;">3</div>
+        <div style="border: 1px solid red;">4</div>
+        <div style="border: 1px solid red;">5</div>
+        <div style="border: 1px solid red;">6</div>
+    </div>
+    <div style="display: flex; flex-direction: column-reverse; ">
+        <div style="border: 1px solid red;">1</div>
+        <div style="border: 1px solid red;">2</div>
+        <div style="border: 1px solid red;">3</div>
+        <div style="border: 1px solid red;">4</div>
+        <div style="border: 1px solid red;">5</div>
+        <div style="border: 1px solid red;">6</div>
+    </div>
+    <div style="display: flex; flex-direction: row-reverse; ">
+        <div style="border: 1px solid red;">1</div>
+        <div style="border: 1px solid red;">2</div>
+        <div style="border: 1px solid red;">3</div>
+        <div style="border: 1px solid red;">4</div>
+        <div style="border: 1px solid red;">5</div>
+        <div style="border: 1px solid red;">6</div>
+    </div>
+    <div style="display: flex; flex-direction: row; ">
+        <div style="border: 1px solid red;">1</div>
+        <div style="border: 1px solid red;">2</div>
+        <div style="border: 1px solid red;">3</div>
+        <div style="border: 1px solid red;">4</div>
+        <div style="border: 1px solid red;">5</div>
+        <div style="border: 1px solid red;">6</div>
+    </div>
+
+    <div style="display: flex; ">
+        <div style="border: 1px solid red; width: 30%;">1</div>
+        <div style="border: 1px solid red;width: 30%;">2</div>
+        <div style="border: 1px solid red;width: 30%;">3</div>
+        <div style="border: 1px solid red;width: 30%;">4</div>
+        <div style="border: 1px solid red;width: 30%;">5</div>
+        <div style="border: 1px solid red;width: 30%;">6</div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+        <div style="border: 1px solid red; width: 30%;margin-bottom: 10px;">1</div>
+        <div style="border: 1px solid red;width: 30%;margin-bottom: 10px;">2</div>
+        <div style="border: 1px solid red;width: 30%;margin-bottom: 10px;">3</div>
+        <div style="border: 1px solid red;width: 30%;margin-bottom: 10px;">4</div>
+        <div style="border: 1px solid red;width: 30%;margin-bottom: 10px;">5</div>
+        <div style="border: 1px solid red;width: 30%;margin-bottom: 10px;">6</div>
+        <div style="border: 1px solid red; width: 30%;margin-bottom: 10px;">1</div>
+        <div style="border: 1px solid red;width: 30%;margin-bottom: 10px;">2</div>
+        <div style="border: 1px solid red;width: 30%;margin-bottom: 10px;">3</div>
+        <div style="border: 1px solid red;width: 30%;margin-bottom: 10px;">4</div>
+        <div style="border: 1px solid red;width: 30%;margin-bottom: 10px;">5</div>
+        <div style="border: 1px solid red;width: 30%;margin-bottom: 10px;">6</div>
+    </div> -->
+</body>
+
+</html>
