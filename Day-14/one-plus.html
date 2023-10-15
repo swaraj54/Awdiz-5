@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/d4fa596027.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'OnePlus Sans Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+        }
+
+        .w-2 {
+            width: 2%;
+        }
+
+        .w-h-100 {
+            height: 100%;
+            width: 100%;
+        }
+
+        #screen {
+            width: 100%;
+            /* border: 10px solid red; */
+        }
+
+        #navbar {
+            width: 100%;
+            /* border: 5px solid blue; */
+            /* height: 60px; */
+        }
+
+        #nav-one {
+            height: 32px;
+            /* border: 2px solid green; */
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #nav-one>p:nth-child(1) {
+            width: 22%;
+            /* border: 1px solid red; */
+        }
+
+        #nav-one>p:nth-child(2) {
+            width: 50%;
+            /* border: 1px solid red; */
+        }
+
+        #nav-one>p:nth-child(3) {
+            width: 22%;
+            /* border: 1px solid red; */
+            text-align: right;
+        }
+
+        #nav-two {
+            height: 32px;
+            /* border: 2px solid purple; */
+            color: black;
+            text-align: center;
+            font-size: 16px;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #nav-two>div {
+            width: 38%;
+            /* border: 2px solid red; */
+        }
+
+        #nav-two>div:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+        }
+
+        #nav-two-one-one {
+            width: 100px;
+            height: 20px;
+            /* border: 1px solid black; */
+        }
+
+        #nav-two>div:nth-child(2) {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+        }
+
+        #body {
+            width: 100%;
+            /* height: 1000px; */
+            border: 5px solid blue;
+        }
+
+        #slider {
+            width: 200%;
+            height: 640px;
+            margin-left: -50%;
+        }
+
+        #mobile-ad {
+            width: 100%;
+            height: 500px;
+            border: 5px solid purple;
+        }
+
+        #mobile-ad>div {
+            width: 90%;
+            margin: auto;
+            height: 400px;
+            /* border: 2px solid red; */
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #mobile-ad>div>div:nth-child(1) {
+            width: 30%;
+            border: 5px solid red;
+        }
+
+        #mobile-ad>div>div:nth-child(2) {
+            width: 65%;
+            /* border: 5px solid red; */
+        }
+
+        #mobile-ad>div>div:nth-child(2)>img:hover {
+            /* border: 5px solid black; */
+            scale: 1.05;
+
+        }
+
+        #footer {
+            width: 100%;
+            height: 200px;
+            border: 5px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="screen">
+        <div id="navbar">
+            <div id="nav-one">
+                <p></p>
+                <p>Hit ‘Notify Me’ and stand a chance to win a OnePlus Open. Notify Me ›</p>
+                <p><i class="fa-solid fa-x"></i></p>
+            </div>
+            <div id="nav-two">
+                <div>
+                    <div id="nav-two-one-one">
+                        <img class="w-h-100" src="https://cdn.worldvectorlogo.com/logos/oneplus-wordmark-4.svg"
+                            alt="One Plus" />
+                    </div>
+                    <div>Phone</div>
+                    <div>TV & Display</div>
+                    <div>Audio & Watch</div>
+                    <div>Tablet</div>
+                    <div>Watch</div>
+                    <div>Offers</div>
+                </div>
+                <div>
+                    <div class="w-2"></div>
+                    <div>Store</div>
+                    <div>OneTopia</div>
+                    <div>OnePlus Featuring</div>
+                    <div>Community</div>
+                    <div>Support</div>
+                    <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div><i class="fa-solid fa-cart-shopping"></i></div>
+                    <div><i class="fa-regular fa-user"></i></div>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="slider">
+                <img class="w-h-100"
+                    src="https://www.oneplus.in/content/dam/oasis/page/2023/in/home/diwali/diwali_lunch-desktop.jpg.thumb.webp"
+                    alt="Advt" />
+            </div>
+            <div id="mobile-ad">
+                <div>
+                    <div>1</div>
+                    <div>
+                        <img class="w-h-100"
+                            src="https://www.oneplus.in/content/dam/oasis/page/2023/in/home/diwali/1009/new/01-pc.jpg.thumb.webp"
+                            alt="Mobiles" />
+                    </div>
+                </div>
+
+            </div>
+            <div id="tab-ad"></div>
+            <div id="hot-picks"></div>
+        </div>
+        <div id="footer">Footer</div>
+    </div>
+</body>
+
+</html>
