@@ -110,7 +110,7 @@
         #mobile-ad {
             width: 100%;
             height: 500px;
-            border: 5px solid purple;
+            /* border: 5px solid purple; */
         }
 
         #mobile-ad>div {
@@ -137,6 +137,96 @@
             /* border: 5px solid black; */
             scale: 1.05;
 
+        }
+
+        #tab-ad {
+            height: 400px;
+            width: 100%;
+            /* border: 5px solid red; */
+        }
+
+        #tab-ad>div {
+            width: 90%;
+            margin: auto;
+            height: 100%;
+            /* border: 5px solid purple; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #tab-ad>div>div {
+            width: 49%;
+            height: 100%;
+            /* border: 5px solid green; */
+            background-color: #fff0c0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #tab-ad>div>div>div {
+            width: 47%;
+            height: 100%;
+            /* border: 5px solid green; */
+        }
+
+        .tab-ad-img-div {
+            width: 100%;
+            height: 90%;
+            margin: auto;
+            margin-top: 5%;
+        }
+
+        .tab-ad-info-sec {
+            /* border: 5px solid red; */
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .tab-ad-info-sec>div:nth-child(1)>p {
+            font-size: 40px;
+            padding-top: 25px;
+        }
+
+        .tab-ad-info-sec>div:nth-child(2) {
+            height: 40%;
+            align-items: end;
+            position: absolute;
+            bottom: 0;
+            margin-left: 10px;
+            /* border: 5px solid blue; */
+        }
+
+        .tab-ad-info-sec>div:nth-child(2)>p:nth-child(1) {
+            font-size: 14px;
+        }
+
+        .tab-ad-info-sec>div:nth-child(2)>p:nth-child(2) {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        
+        .tab-ad-info-sec>div:nth-child(2)>div{
+        display: flex;
+        justify-content: space-around;    
+        }
+        .tab-ad-info-sec>div:nth-child(2)>div>button {
+            width: 48%;
+            height: 40px;
+            border-radius: 3px;
+            margin-top: 15px;
+        }
+
+        .tab-ad-info-sec>div:nth-child(2)>div>button:nth-child(1) {
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            border: none;
+        }
+
+        .tab-ad-info-sec>div:nth-child(2)>div>button:nth-child(2) {
+            background-color: #fff0c0;
+            font-size: 14px;
         }
 
         #footer {
@@ -196,9 +286,57 @@
                             alt="Mobiles" />
                     </div>
                 </div>
-
             </div>
-            <div id="tab-ad"></div>
+            <div id="tab-ad">
+                <div>
+                    <div>
+                        <div class="tab-ad-info-sec">
+                            <div>
+                                <p>OnePlus Pad Go</p>
+                            </div>
+                            <div>
+                                <p>Pre-order is live! (8+128 GB variant only).
+                                    Get a free Go Folio Case with Pre-order post delivery. Pre-order ends on 20th Oct
+                                </p>
+                                <p>From ₹17,999 *Incl. bank Discount</p>
+                                <div>
+                                    <button>Pre-Order Now</button>
+                                    <button>Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tab-ad-img-div">
+                                <img class="w-h-100"
+                                    src="https://www.oneplus.in/content/dam/oasis/page/2023/in/medium-product-card/Bluey-%E4%B8%AD%E4%BA%A7%E5%93%81%E5%8D%A1-pc-10.6.png.thumb.webp"
+                                    alt="Tab" />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="tab-ad-info-sec">
+                            <div>
+                                <p>OnePlus Bullets Wireless Z2</p>
+                            </div>
+                            <div>
+                                <p>Save extra up to ₹200 by using the APP exclusive coupon</p>
+                                <p>At ₹1 349 *Incl. bank discount</p>
+                                <div>
+                                    <button>Buy Now</button>
+                                    <button>Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tab-ad-img-div">
+                                <img class="w-h-100"
+                                    src="https://www.oneplus.in/content/dam/oasis/page/2023/in/medium-product-card/pc-7.12-1.png.thumb.webp"
+                                    alt="Tab" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="hot-picks"></div>
         </div>
         <div id="footer">Footer</div>
