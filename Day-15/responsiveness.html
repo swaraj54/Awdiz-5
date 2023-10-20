@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsiveness</title>
+    <style>
+        * {
+            font-family: 'OnePlus Sans Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+            margin: 0;
+            padding: 0;
+        }
+
+        .w-9 {
+            width: 90%;
+            margin: auto;
+            /* border: 5px solid white; */
+        }
+
+        #footer {
+            width: 100%;
+            height: 500px;
+            background-color: #000000;
+            color: white;
+        }
+
+        #footer>div>div:nth-child(1) {
+            border-bottom: 2px solid #3f3f3f;
+            height: 30px;
+            padding-top: 50px;
+            font-weight: 100;
+            font-size: 18px;
+        }
+
+        #footer-right {
+            display: flex;
+            /* border: 2px solid red; */
+            height: 350px;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+
+        #footer-right>div {
+            width: 49%;
+            /* border: 2px solid green; */
+            /* background-size: cover; */
+            background-size: 99% 100%;
+        }
+
+        #footer-right>div:nth-child(1) {
+            background-image: url('https://oasis.opstatics.com/content/dam/oasis/page/2022/new-homepage/na/homepage/subscribe/APPdownload_PC_Red_New.png.thumb.webp');
+        }
+
+        #footer-right>div:nth-child(2) {
+            background-image: url('https://oasis.opstatics.com/content/dam/oasis/page/2022/new-homepage/na/homepage/subscribe/Subscribe-PC-2card.jpg.thumb.webp');
+        }
+        
+        #footer-right > div > div{
+            width: 46%;
+            margin-left: 20px;
+            margin-top: 25px;
+            /* border: 2px solid red; */
+        }
+        #footer-right > div > div >p:nth-child(1){
+            font-size: 36px;
+            margin-bottom: 14px;
+        }
+        
+        #footer-right > div > div >p:nth-child(2){
+            color :#a19d9f;
+            font-size: 14px;
+        }
+        
+        #footer-right > div > div >button:nth-child(3){
+            width: 100%;
+            background-color: black;
+            color: white;
+            border:  1px solid #8e8b8c;
+            height: 50px;
+            font-size: 16px;
+            margin-top: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="footer">
+        <div class="w-9">
+            <div>
+                <p>Stay connected</p>
+            </div>
+            <div id="footer-right">
+                <div>
+                    <div>
+                        <p>Shop With Exclusive Benefits</p>
+                        <p>Download OnePlus store app on Google Play</p>
+                        <button>Google Play</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>Always be the first to know.</p>
+                        <p>Sign up for our newsletter!</p>
+                        <button>Subscribe Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
