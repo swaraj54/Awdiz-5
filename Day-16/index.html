@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parentDiv {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            border: 5px solid blue;
+        }
+
+        #parentDiv>div {
+            width: 24%;
+            border: 2px solid red;
+            height: 300px;
+        }
+
+        #child-3>div {
+            width: 100%;
+            border: 2px solid black;
+            height: 50px;
+        }
+
+        #child-2>div {
+            width: 100%;
+            height: 50px;
+            border: 2px solid green;
+        }
+
+        #child-2>div:nth-child(1) {
+            display: none;
+        }
+
+        @media screen and (max-width : 650px) {
+
+            #parentDiv {
+                border: 5px solid green;
+                flex-direction: column;
+            }
+
+            #parentDiv>div {
+                width: 100%;
+                border: 5px solid purple;
+            }
+
+            #child-3 {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #child-3>div {
+                border: 2px solid red;
+            }
+
+            #parentDiv>div:nth-child(1) {
+                display: none;
+            }
+
+            #child-3>div:nth-child(2) {
+                display: none;
+            }
+
+            #child-2>div:nth-child(1) {
+                display: block;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parentDiv">
+        <div>1</div>
+        <div id="child-2">
+            <div>2.1</div>
+            <div>2.2</div>
+        </div>
+        <div id="child-3">
+            <div>3.1</div>
+            <div>3.2</div>
+            <div>3.3</div>
+            <div>3.4</div>
+        </div>
+        <div>4</div>
+    </div>
+</body>
+
+</html>

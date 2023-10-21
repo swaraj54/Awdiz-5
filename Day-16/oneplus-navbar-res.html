@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .h-w-1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        #body {
+            width: 100%;
+            height: 600px;
+            border: 5px solid black;
+        }
+
+        #navbar {
+            width: 90%;
+            margin: auto;
+            height: 60px;
+            /* border: 2px solid blue; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #navbar>div:nth-child(1) {
+            display: none;
+        }
+
+        #child-2 {
+            display: flex;
+            width: 45%;
+        }
+
+        #child-2>div:nth-child(1) {
+            width: 20%;
+            height: 100%;
+        }
+
+        #child-2>div:nth-child(2) {
+            display: flex;
+            width: 80%;
+            height: 100%;
+            justify-content: space-around;
+        }
+
+        #child-3 {
+            width: 45%;
+            display: flex;
+        }
+
+        #child-3>div:nth-child(1) {
+            display: flex;
+            width: 80%;
+            height: 100%;
+            justify-content: space-around;
+        }
+
+        /* @media screen and (min-width :1380px) {
+            #navbar {
+                border: 2px solid red;
+            }
+        } */
+        @media screen and (max-width :1025px) {
+            #navbar>div:nth-child(1) {
+                display: block;
+            }
+
+            #child-2>div:nth-child(2) {
+                display: none;
+            }
+
+            #navbar>div:nth-child(1) {
+                /* border: 2px solid red; */
+                width: 30%;
+                justify-content: left;
+            }
+
+            #child-2 {
+                /* border: 2px solid red; */
+                width: 30%;
+                justify-content: center;
+            }
+
+            #child-3 {
+                /* border: 2px solid red; */
+                width: 30%;
+                justify-content: right;
+            }
+        }
+
+        @media screen and (max-width : 1360px) {
+            #child-3>div:nth-child(1) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body">
+        <div id="navbar">
+            <div>bars</div>
+            <div id="child-2">
+                <div>
+                    <img class="h-w-1" src="https://cdn.worldvectorlogo.com/logos/oneplus-wordmark-4.svg"
+                        alt="One Plus" />
+                </div>
+                <div>
+                    <div>1</div>
+                    <div>1</div>
+                    <div>1</div>
+                    <div>1</div>
+                    <div>1</div>
+                </div>
+            </div>
+            <div id="child-3">
+                <div>
+                    <div>1</div>
+                    <div>1</div>
+                    <div>1</div>
+                    <div>1</div>
+                    <div>1</div>
+                </div>
+                <div>fontawesome</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
